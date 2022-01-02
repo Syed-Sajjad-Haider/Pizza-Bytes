@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/drawable/box.xml" value="0.1554054054054054" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1554054054054054" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/drawable/vie_bg.xml" value="0.11" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_forget.xml" value="0.1" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_main.xml" value="0.21" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_make_selection.xml" value="0.14493243243243242" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_otp_verficatio_done.xml" value="0.17" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_pin_through_sms_or_mail.xml" value="0.14493243243243242" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_set_new_password.xml" value="0.14493243243243242" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_sign_in.xml" value="0.16" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_sign_up.xml" value="0.18" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_splash_screen.xml" value="0.18" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_success.xml" value="0.1" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_verify_otp.xml" value="0.21" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/splashfragment1.xml" value="0.18" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/splashfragment2.xml" value="0.2" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/splashfragment3.xml" value="0.17" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

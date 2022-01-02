@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pizza.pizzabytes.SplashScreen">
+
+    <ImageView
+        android:id="@+id/splashimage"
+        android:layout_width="match_parent"
+        android:layout_height="900dp"
+        android:background="@color/white"
+        android:src="@drawable/startup3"
+
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/splashlogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pizza"
+        android:elevation="2dp"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/splashtext"
+        android:layout_width="300dp"
+        android:elevation="2dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/butterfly_kids"
+        android:gravity="center"
+        android:text="PIZZA BYTES"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/splashlogo"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:elevation="2dp"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/loadingpizza"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splashtext" />
+
+<!--    <com.cuberto.liquid_swipe.LiquidPager-->
+<!--        android:id="@+id/pager"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+<!--    <Button-->
+<!--        android:id="@+id/next"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="NEXT"-->
+
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/lottie"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/lottie"-->
+<!--        app:layout_constraintVertical_bias="0.75"-->
+<!--        app:layout_constraintHorizontal_bias="0.9"-->
+<!--        />-->
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
