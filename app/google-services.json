@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "445346461520",
-    "project_id": "pizza-bytes",
-    "storage_bucket": "pizza-bytes.appspot.com"
+    "project_number": "888946599713",
+    "project_id": "pizza-bytes-451bb",
+    "storage_bucket": "pizza-bytes-451bb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:445346461520:android:c4a9fc3c7b14c08cd8de55",
+        "mobilesdk_app_id": "1:888946599713:android:77141002706649e4df8060",
         "android_client_info": {
           "package_name": "com.pizza.pizzabytes"
         }
       },
       "oauth_client": [
         {
-          "client_id": "445346461520-3dbmqbfbrilho56j0pulo0dhl889q53c.apps.googleusercontent.com",
+          "client_id": "888946599713-5tmcq7r3cqrt90aqvv6dt03c764e9qpg.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAqf5Fl5tQCdHJyFF0BoDt22Y0r9vq8-tI"
+          "current_key": "AIzaSyCi-Mc6ox2_PX_GdqRjGBHCbNs-QCUzxE8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "445346461520-3dbmqbfbrilho56j0pulo0dhl889q53c.apps.googleusercontent.com",
+              "client_id": "888946599713-5tmcq7r3cqrt90aqvv6dt03c764e9qpg.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

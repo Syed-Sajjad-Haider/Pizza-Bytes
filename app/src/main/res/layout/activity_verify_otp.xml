@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Enter the 4 Digit Verification Code we just\non your Number"
+            android:text="Enter the 6 Digit Verification Code we just\non your Number"
             android:textColor="@color/black"
             android:textAlignment="center"
             android:textSize="15dp"
@@ -96,6 +96,7 @@
 
         <com.chaos.view.PinView
             android:id="@+id/pinView"
+            app:itemCount="6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -105,7 +106,7 @@
             android:inputType="number"
             android:cursorVisible="true"
             app:itemHeight="50dp"
-            app:itemSpacing="20dp"
+            app:itemSpacing="5dp"
             app:itemWidth="50dp"
             style="@style/PinWidget.PinView"
             app:hideLineWhenFilled="true"

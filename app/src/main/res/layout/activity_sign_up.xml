@@ -45,7 +45,7 @@
         android:textColor="@color/white"
         android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/loginpizza"
+        app:layout_constraintBottom_toBottomOf="@+id/signuppizza"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".62"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginpizza">
+        app:layout_constraintTop_toBottomOf="@+id/signuppizza">
+<!--        upper line only edit-->
 
 
         <TextView
@@ -104,10 +105,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/nametext"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:textSize="15dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:textColor="@color/black"
                     android:text="Full Name"/>
 
@@ -126,7 +130,11 @@
                     android:layout_height="wrap_content"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/phonetext"
+
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:textSize="15dp"
@@ -137,9 +145,9 @@
                     android:id="@+id/signupnumber"
                     android:layout_width="match_parent"
                     android:ems="10"
+                    android:inputType="number"
                     android:textSize="18dp"
                     android:padding="17dp"
-                    android:inputType="number|numberSigned"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/black"
                     android:hint="03001234567"
@@ -148,7 +156,11 @@
                     android:layout_height="wrap_content"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/passtext"
+
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:textSize="15dp"
@@ -169,10 +181,14 @@
                     android:paddingLeft="25dp"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/repasstext"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:textSize="15dp"
+
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:textColor="@color/black"
                     android:text="Repeat Password"/>
 
@@ -202,10 +218,13 @@
                     android:text="Personal Information"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:layout_marginTop="20dp"
                     android:textSize="15dp"
+                    android:id="@+id/emailtext"
                     android:textColor="@color/black"
                     android:text="Email"/>
 
@@ -247,40 +266,117 @@
                     android:layout_height="wrap_content"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:textSize="15dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:textColor="@color/black"
                     android:text="City"/>
 
                 <Spinner
                     android:id="@+id/cityspin"
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:spinnerMode="dropdown"
-                    android:background="@drawable/box"
-                    android:layout_marginTop="5dp"
-                    android:paddingLeft="25dp"/>
+
+                    android:layout_marginTop="5dp"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:focusable="true"
+
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:textSize="15dp"
+                    android:text="Location"
                     android:textColor="@color/black"
-                    android:text="Location"/>
+                    android:textSize="15dp" />
 
                 <Spinner
                     android:id="@+id/locationspin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:spinnerMode="dropdown"
-                    android:background="@drawable/box"
+
                     android:layout_marginTop="5dp"
-                    android:paddingLeft="25dp"/>
+                    android:paddingLeft="-5dp"/>
+                <TextView
+                    android:focusable="true"
+                    android:id="@+id/radiotext"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Choose Gender"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+                <RadioGroup
+                    android:id="@+id/gendergroup"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:textSize="18dp"
+                        android:id="@+id/maleradio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+
+                        />
+                    <RadioButton
+
+                        android:textSize="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/femaleradio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        />
+
+                    <RadioButton
+
+                        android:textSize="18dp"
+                        android:id="@+id/otherradio"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+                        />
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:focusable="true"
+                    android:id="@+id/agetext"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Select Your Age"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <DatePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datepikker"
+                    android:layout_marginTop="-10dp"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:spinnersShown="true"/>
+
+
+
+
 
                 <Button
                     android:id="@+id/mainbtn"

@@ -1,3 +1,47 @@
 <resources>
     <string name="app_name">Pizza Bytes</string>
+
+
+    <string-array name="array_pakistan_city">
+        <item>Select Your City</item>
+        <item>Lahore</item>
+        <item>Karachi</item>
+        <item>Islamabad</item>
+        <item>Sailkot</item>
+    </string-array>
+
+    <string-array name="array_city_location">
+        <item>Select Your Location</item>
+    </string-array>
+
+    <string-array name="array_city_Lahore_location">
+        <item>Select Your Location</item>
+        <item>Allama Iqbal Town</item>
+        <item>PIA Road</item>
+        <item>Johar Town</item>
+        <item>Mazang Chungi</item>
+    </string-array>
+
+    <string-array name="array_city_Karachi_location">
+        <item>Select Your Location</item>
+        <item>Gulshan Bhar</item>
+        <item>Goli Mar</item>
+        <item>Kalifton</item>
+    </string-array>
+
+    <string-array name="array_city_Islamabad_location">
+        <item>Select Your Location</item>
+        <item>Bharia Town</item>
+        <item>Defence Road</item>
+        <item>FB Sector 17</item>
+    </string-array>
+
+    <string-array name="array_city_Sailkot_location">
+        <item>Select Your Location</item>
+        <item>Main Road</item>
+        <item>Sailkot Road</item>
+        <item>Ghari Chowk</item>
+        <item>Ghanta Ghar</item>
+    </string-array>
+
 </resources>
