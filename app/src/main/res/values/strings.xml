@@ -2,6 +2,8 @@
     <string name="app_name">Pizza Bytes</string>
 
 
+
+
     <string-array name="array_pakistan_city">
         <item>Select Your City</item>
         <item>Lahore</item>
@@ -43,5 +45,9 @@
         <item>Ghari Chowk</item>
         <item>Ghanta Ghar</item>
     </string-array>
+
+    <string name="facebook_app_id">1123657998442468</string>
+    <string name="fb_login_protocol_scheme">fb1123657998442468</string>
+
 
 </resources>

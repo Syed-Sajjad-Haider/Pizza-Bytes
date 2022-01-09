@@ -1,5 +1,6 @@
 package com.pizza.pizzabytes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -12,6 +13,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SignInActivity extends AppCompatActivity
 {
     ImageView facebook, google, twitter, pizza;
@@ -19,12 +25,15 @@ public class SignInActivity extends AppCompatActivity
     EditText user,pass;
     Button login;
     ConstraintLayout constraintLayout;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+
+        auth = FirebaseAuth.getInstance();
 
         user = (EditText) findViewById(R.id.email);
         pass = (EditText) findViewById(R.id.password);
@@ -91,9 +100,24 @@ public class SignInActivity extends AppCompatActivity
                 username = user.getText().toString();
                 password = pass.getText().toString();
 
-                Toast.makeText(getApplicationContext(), "Welcome to Dashboard "+username,Toast.LENGTH_SHORT).show();
-//                Intent i = new Intent(getApplicationContext(),SignUpActivity.class);
-//                startActivity(i);
+                if(username.equals(""))
+                {
+                    user.setError("Email Required");
+                    user.requestFocus();
+                }
+                else if (password.equals(""))
+                {
+                    pass.setError("Password Required");
+                    pass.requestFocus();
+                }
+                else
+                    {
+
+//                        Toast.makeText(getApplicationContext(), "Welcome to Dashboard " + username, Toast.LENGTH_SHORT).show();
+                        loginUser(username,password);
+//                        Intent i = new Intent(getApplicationContext(),SignUpActivity.class);
+//                        startActivity(i);
+                    }
             }
         });
 
@@ -133,14 +157,26 @@ public class SignInActivity extends AppCompatActivity
             }
         });
 
+    }
 
+    private void loginUser(String username, String password)
+    {
+        auth.signInWithEmailAndPassword(username,password).addOnCompleteListener(SignInActivity.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task)
+            {
+                if (task.isSuccessful())
+                {
+                    Toast.makeText(getApplicationContext(), "Welcome to Dashboard " + username, Toast.LENGTH_SHORT).show();
+//                        Intent i = new Intent(getApplicationContext(),SignUpActivity.class);
+//                        startActivity(i);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Wrong Email or Password", Toast.LENGTH_SHORT).show();
 
-
-
-
-
-
-
-
+                }
+            }
+        });
     }
 }

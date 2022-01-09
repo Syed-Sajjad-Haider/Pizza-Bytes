@@ -49,26 +49,36 @@
             android:textColor="@color/black"
             android:fontFamily="@font/miriam_libre"
             android:gravity="center"
-            android:text="Provide Your Account Email\nfor which you want to reset password"
+            android:text="Provide Your Account Phone Number\nfor which you want to\nreset password"
             android:textAlignment="center"
             android:textSize="18dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="50dp"
+            />
 
         <EditText
             android:id="@+id/forgetemail"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="5dp"
             android:textColor="@color/black"
             android:paddingLeft="15dp"
-            android:drawableLeft="@drawable/email"
+            android:drawableLeft="@drawable/ic_baseline_phone_24"
             android:drawablePadding="10dp"
             android:background="@drawable/box"
             android:backgroundTint="#DAD8D8"
             android:ems="10"
             android:fontFamily="serif"
+            android:textSize="18dp"
             android:gravity="center|center_horizontal|left|center_vertical"
-            android:hint="Type Email Here"
-            android:inputType="textEmailAddress" />
+            android:hint="03001234567"
+            android:inputType="number" />
 
         <Button
             android:id="@+id/forgetnext"
@@ -81,7 +91,7 @@
             android:fontFamily="monospace"
             android:text="NEXT"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
     </LinearLayout>

@@ -1,5 +1,6 @@
 package com.pizza.pizzabytes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -19,6 +20,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.Calendar;
 
 public class SignUpActivity extends AppCompatActivity
@@ -27,13 +34,15 @@ public class SignUpActivity extends AppCompatActivity
     Spinner  city, location;
     DatePicker datePicker;
     Button continuebtn;
-    TextView login,spizzaname,stagline,citytext,locationtext,nametxt,phonetxt,passtxt,repasstxt,emailtxt,radiotxt,agetxt;
+    TextView login,spizzaname,stagline,citytext,locationtext,nametxt,phonetxt
+            ,passtxt,repasstxt,emailtxt,radiotxt,agetxt;
     ConstraintLayout sconstraintLayout;
     ImageView imageView;
     String selectCity,selectLocation;
     private ArrayAdapter<CharSequence> cityAdaptor, locationAdaptor;
     RadioGroup radioGroup;
     RadioButton radioButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -61,6 +70,8 @@ public class SignUpActivity extends AppCompatActivity
         location = (Spinner) findViewById(R.id.locationspin);
 
         radioGroup = (RadioGroup) findViewById(R.id.gendergroup);
+        radioGroup.clearCheck();
+
 //        male = (RadioButton) findViewById(R.id.maleradio);
 //        female = (RadioButton) findViewById(R.id.femaleradio);
 //        order = (RadioButton) findViewById(R.id.otherradio);
@@ -70,6 +81,28 @@ public class SignUpActivity extends AppCompatActivity
         citytext = (TextView) findViewById(R.id.city);
         locationtext = (TextView) findViewById(R.id.location);
 
+        imageView = (ImageView) findViewById(R.id.signuppizza);
+
+        continuebtn = (Button) findViewById(R.id.mainbtn);
+
+        login = (TextView) findViewById(R.id.login);
+        spizzaname = (TextView) findViewById(R.id.signuppizzaname);
+        stagline = (TextView) findViewById(R.id.signuppizzatag);
+
+        sconstraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout3);
+
+        spizzaname.setTranslationX(1000);
+        stagline.setTranslationX(-1000);
+        imageView.setTranslationY(2300);
+        sconstraintLayout.setTranslationX(-1500);
+        login.setTranslationX(500);
+
+        imageView.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        sconstraintLayout.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(100).start();
+        login.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+
+        spizzaname.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(800).start();
+        stagline.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(800).start();
 
 
         cityAdaptor = ArrayAdapter.createFromResource(this, R.array.array_pakistan_city,
@@ -134,35 +167,12 @@ public class SignUpActivity extends AppCompatActivity
         });
 
 
-
-        imageView = (ImageView) findViewById(R.id.signuppizza);
-
-        continuebtn = (Button) findViewById(R.id.mainbtn);
-
-        login = (TextView) findViewById(R.id.login);
-        spizzaname = (TextView) findViewById(R.id.signuppizzaname);
-        stagline = (TextView) findViewById(R.id.signuppizzatag);
-
-        sconstraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout3);
-
-        spizzaname.setTranslationX(1000);
-        stagline.setTranslationX(-1000);
-        imageView.setTranslationY(2300);
-        sconstraintLayout.setTranslationX(-1500);
-        login.setTranslationX(500);
-
-        imageView.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-        sconstraintLayout.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(100).start();
-        login.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(200).start();
-
-        spizzaname.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(800).start();
-        stagline.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(800).start();
-
         continuebtn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
+
                 int selectedGenderId = radioGroup.getCheckedRadioButtonId();
                 radioButton = findViewById(selectedGenderId);
 
@@ -174,7 +184,7 @@ public class SignUpActivity extends AppCompatActivity
                 String coun = country.getText().toString().trim();
                 String cit = selectCity;
                 String locat = selectLocation;
-                String gendername = radioButton.getText().toString();
+                String gendername;
 
 
                 int currentYear = Calendar.getInstance().get(Calendar.YEAR);
@@ -187,18 +197,7 @@ public class SignUpActivity extends AppCompatActivity
 
                 String date = day+"/"+month+"/"+year;
 
-//                nametxt.setError(null);
-//                phonetxt.setError(null);
-//                passtxt.setError(null);
-//                repasstxt.setError(null);
-//                emailtxt.setError(null);
-//                citytext.setError(null);
-//                locationtext.setError(null);
-
-
-
-//                phonenumber = phonenumber.substring(1);
-//                phonenumber = "+92" + phonenumber;
+//
 
                 if (fname.equals(""))
                 {
@@ -286,38 +285,75 @@ public class SignUpActivity extends AppCompatActivity
                 }
                 else
                     {
-                        nametxt.setError(null);
-                        phonetxt.setError(null);
-                        passtxt.setError(null);
-                        repasstxt.setError(null);
-                        emailtxt.setError(null);
-                        citytext.setError(null);
-                        locationtext.setError(null);
+                        gendername =radioButton.getText().toString();
                         phonenumber = phonenumber.substring(1);
                         phonenumber = "+92" + phonenumber;
-//                        Toast.makeText(getApplicationContext(), "Name Is : " + fname, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(getApplicationContext(), "Phone Number Is : " + phonenumber, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(getApplicationContext(), "Password Is : " + pass, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(getApplicationContext(), "Repeat Password Is : " + repass, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(getApplicationContext(), "Email Is : " + mail, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(getApplicationContext(), "Country Is : " + coun, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(getApplicationContext(), "City Is : " + cit, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(getApplicationContext(), "Location Is : " + locat, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(getApplicationContext(), "Gender Is : " + gendername, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(getApplicationContext(), "Date Of Birth Is : " + date, Toast.LENGTH_SHORT).show();
-//                        Toast.makeText(getApplicationContext(), "Welcome to OTP Verification", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(getApplicationContext(), verifyOTP.class);
-                        i.putExtra("fullname", fname);
-                        i.putExtra("phonenumber", phonenumber);
-                        i.putExtra("password", pass);
-                        i.putExtra("repeatpassword", repass);
-                        i.putExtra("email", mail);
-                        i.putExtra("country", coun);
-                        i.putExtra("city", cit);
-                        i.putExtra("location", locat);
-                        i.putExtra("gender", gendername);
-                        i.putExtra("dob", date);
-                        startActivity(i);
+                        Query query = FirebaseDatabase.getInstance().getReference("Registered Users")
+                                .orderByChild("newotptext").equalTo(phonenumber);
+                        String finalPhonenumber = phonenumber;
+                        query.addListenerForSingleValueEvent(new ValueEventListener()
+                        {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot)
+                            {
+                                if (snapshot.exists())
+                                {
+                                    Toast.makeText(getApplicationContext(), "This Phone Number Is Not Availible For Register" , Toast.LENGTH_SHORT).show();
+                                    phonetxt.setError("Number Is Already Registered");
+                                    phonetxt.requestFocus();
+                                }
+                                else
+                                {
+                                    Query query2 = FirebaseDatabase.getInstance().getReference("Registered Users")
+                                            .orderByChild("email").equalTo(mail);
+                                    query2.addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            if (snapshot.exists())
+                                            {
+                                                Toast.makeText(getApplicationContext(), "This Email Is Not Availible For Register" , Toast.LENGTH_SHORT).show();
+                                                emailtxt.setError("Email Is Already Registered");
+                                                emailtxt.requestFocus();
+                                            }
+                                            else
+                                            {
+                                                nametxt.setError(null);
+                                                phonetxt.setError(null);
+                                                passtxt.setError(null);
+                                                repasstxt.setError(null);
+                                                emailtxt.setError(null);
+                                                citytext.setError(null);
+                                                locationtext.setError(null);
+                                                radiotxt.setError(null);
+                                                Intent i = new Intent(getApplicationContext(), verifyOTP.class);
+                                                i.putExtra("fullname", fname);
+                                                i.putExtra("phonenumber", finalPhonenumber);
+                                                i.putExtra("password", pass);
+                                                i.putExtra("repeatpassword", repass);
+                                                i.putExtra("email", mail);
+                                                i.putExtra("country", coun);
+                                                i.putExtra("city", cit);
+                                                i.putExtra("location", locat);
+                                                i.putExtra("gender", gendername);
+                                                i.putExtra("dob", date);
+                                                i.putExtra("checkUpdate", "insertvalue");
+                                                startActivity(i);
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+
+                                        }
+                                    });
+                                }
+                            }
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error)
+                            {
+
+                            }
+                        });
                     }
             }
         });

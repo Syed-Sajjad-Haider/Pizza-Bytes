@@ -74,7 +74,7 @@ public class verifyOTP extends AppCompatActivity
         pizzatag.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(800).start();
         Intent intent = getIntent();
         String fullname = intent.getStringExtra("fullname");
-        String newotptext = intent.getStringExtra("phonenumber");
+        String PhoneNumber = intent.getStringExtra("phonenumber");
         String password = intent.getStringExtra("password");
         String repassword = intent.getStringExtra("repeatpassword");
         String email = intent.getStringExtra("email");
@@ -84,10 +84,10 @@ public class verifyOTP extends AppCompatActivity
         String gendername = intent.getStringExtra("gender");
         String dob = intent.getStringExtra("dob");
 
-//        insert(fullname,newotptext,password,repassword,email,country,city,location,gendername,dob);
+//        insert(fullname,PhoneNumber,password,repassword,email,country,city,location,gendername,dob);
 
 //        Toast.makeText(getApplicationContext(), "Name Is : " + fullname, Toast.LENGTH_SHORT).show();
-//        Toast.makeText(getApplicationContext(), "Phone Number Is : " + newotptext, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "Phone Number Is : " + PhoneNumber, Toast.LENGTH_SHORT).show();
 //        Toast.makeText(getApplicationContext(), "Password Is : " + password, Toast.LENGTH_SHORT).show();
 //        Toast.makeText(getApplicationContext(), "Repeat Password Is : " + repassword, Toast.LENGTH_SHORT).show();
 //        Toast.makeText(getApplicationContext(), "Email Is : " + email, Toast.LENGTH_SHORT).show();
@@ -99,8 +99,8 @@ public class verifyOTP extends AppCompatActivity
         Toast.makeText(getApplicationContext(), "Welcome to OTP Verification", Toast.LENGTH_SHORT).show();
 
 
-        numberotp.setText("Enter the 6 Digit Verification Code we just sent\non your Number: "+newotptext);
-        sendVerificationCodeToUser(newotptext);
+        numberotp.setText("Enter the 6 Digit Verification Code we just sent\non your Number: "+PhoneNumber);
+        sendVerificationCodeToUser(PhoneNumber);
 
         button.setOnClickListener(new View.OnClickListener()
         {
@@ -111,7 +111,7 @@ public class verifyOTP extends AppCompatActivity
                 if (!code.isEmpty())
                 {
                     verifyCode(code);
-//                    insertDataIntoDb(fullname,newotptext,password,repassword,email,country,city,location,gendername,dob);
+//                    insertDataIntoDb(fullname,PhoneNumber,password,repassword,email,country,city,location,gendername,dob);
                 }
                 else
                 {
@@ -179,7 +179,7 @@ public class verifyOTP extends AppCompatActivity
                             Toast.makeText(verifyOTP.this, "CODE VERIFY SUCCESSFULLY", Toast.LENGTH_SHORT).show();
                             Intent intent = getIntent();
                             String fullname = intent.getStringExtra("fullname");
-                            String newotptext = intent.getStringExtra("phonenumber");
+                            String PhoneNumber = intent.getStringExtra("phonenumber");
                             String password = intent.getStringExtra("password");
                             String repassword = intent.getStringExtra("repeatpassword");
                             String email = intent.getStringExtra("email");
@@ -188,7 +188,19 @@ public class verifyOTP extends AppCompatActivity
                             String location = intent.getStringExtra("location");
                             String gendername = intent.getStringExtra("gender");
                             String dob = intent.getStringExtra("dob");
-                            insertDataIntoDb(fullname,newotptext,password,repassword,email,country,city,location,gendername,dob);
+                            String valueget = intent.getStringExtra("checkUpdate");
+                            String forgetphone = getIntent().getStringExtra("phonenumber");
+                            if (valueget.equals("UpdateValue"))
+                            {
+                                Toast.makeText(verifyOTP.this, "Coming From Forget Activity", Toast.LENGTH_SHORT).show();
+                                Intent intent1 = new Intent(verifyOTP.this,setNewPasswordActivity.class);
+                                intent1.putExtra("phonenumber",forgetphone);
+                                startActivity(intent1);
+                            }
+                            else
+                                {
+                                    insertDataIntoDb(fullname, PhoneNumber, password, repassword, email, country, city, location, gendername, dob);
+                                }
                         }
                         else
                             {
@@ -201,7 +213,9 @@ public class verifyOTP extends AppCompatActivity
                 });
     }
 
-    private void insertDataIntoDb(String fullname, String newotptext, String password, String repassword,
+
+
+    private void insertDataIntoDb(String fullname, String PhoneNumber, String password, String repassword,
                         String email, String country, String city, String location, String gendername, String dob)
     {
         FirebaseAuth auth = FirebaseAuth.getInstance();
@@ -213,12 +227,13 @@ public class verifyOTP extends AppCompatActivity
                 if (task.isSuccessful())
                 {
                     Toast.makeText(verifyOTP.this, "Register Successfully", Toast.LENGTH_SHORT).show();
+//                    FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
                     FirebaseUser firebaseUser = auth.getCurrentUser();
                     firebaseUser.sendEmailVerification();
-                    ReadWriteUserDetails readWriteUserDetails = new ReadWriteUserDetails(fullname,newotptext,password,repassword,email,country,city,location,gendername,dob);
+                    ReadWriteUserDetails readWriteUserDetails = new ReadWriteUserDetails(fullname,PhoneNumber,password,email,country,city,location,gendername,dob);
                     DatabaseReference databaseReference = FirebaseDatabase.getInstance().
-                            getReference("Registered Users").child(email);
-                    databaseReference.child(firebaseUser.getUid()).setValue(readWriteUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            getReference("Registered Users");
+                    databaseReference.child(PhoneNumber).setValue(readWriteUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task)
                         {
@@ -244,6 +259,11 @@ public class verifyOTP extends AppCompatActivity
                             Toast.makeText(verifyOTP.this, "Data Not Inserted", Toast.LENGTH_SHORT).show();
                         }
                     });
+
+                }
+                else
+                {
+                    Toast.makeText(verifyOTP.this, "Something Get Wrong", Toast.LENGTH_SHORT).show();
 
                 }
 //                else

@@ -7,12 +7,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.chaos.view.PinView;
 
 public class pinThroughSmsOrMail extends AppCompatActivity
 {
 
     Button button;
+    TextView textView;
     ConstraintLayout constraintLayout;
+    PinView pinView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -23,6 +28,12 @@ public class pinThroughSmsOrMail extends AppCompatActivity
         button = (Button) findViewById(R.id.verifyotpbutton);
 
         constraintLayout = (ConstraintLayout) findViewById(R.id.constraintlay);
+
+        pinView = (PinView) findViewById(R.id.pinView2);
+
+        textView = (TextView) findViewById(R.id.otppinnumbertext);
+        Intent i =getIntent();
+        textView.setText("Enter the 6 Digit Verification Code we just\non your Number "+i.getStringExtra("PhoneNumber"));
 
 
         constraintLayout.setTranslationY(-3000);
