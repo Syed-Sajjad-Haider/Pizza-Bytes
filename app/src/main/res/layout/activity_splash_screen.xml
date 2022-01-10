@@ -38,7 +38,7 @@
         android:layout_width="300dp"
         android:elevation="2dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/butterfly_kids"
+        android:fontFamily="@font/arial"
         android:gravity="center"
         android:text="PIZZA BYTES"
         android:textSize="48sp"
@@ -71,10 +71,12 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 
-<!--    <Button-->
+    <!--    <Button-->
 <!--        android:id="@+id/next"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->

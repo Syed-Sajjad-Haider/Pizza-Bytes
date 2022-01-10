@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:fontFamily="@font/aguafina_script"
+        android:fontFamily="@font/arial"
         android:text="@string/app_name"
         android:textColor="@color/white"
         android:textSize="48dp"
@@ -43,6 +43,7 @@
         android:layout_marginTop="-5dp"
         android:text="Best Pizza in The Town"
         android:textColor="@color/white"
+        android:fontFamily="@font/arial"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/signuppizza"
@@ -61,7 +62,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="220dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="70dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,11 +76,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="@font/arial"
             android:text="Create An Account"
             android:textColor="@color/black"
             android:textSize="30sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -100,8 +100,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -109,36 +110,36 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:textSize="15dp"
+                    android:fontFamily="@font/arial"
+                    android:textSize="14dp"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:textColor="@color/black"
                     android:text="Full Name"/>
 
                 <EditText
                     android:id="@+id/signupname"
                     android:layout_width="match_parent"
                     android:ems="10"
-                    android:textSize="18dp"
-                    android:padding="17dp"
+                    android:textSize="18sp"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/black"
                     android:hint="Your Name"
                     android:background="@drawable/box"
-                    android:paddingLeft="25dp"
+
                     android:inputType="textPersonName"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="55dp"
+                    android:paddingLeft="25dp"
+                    android:fontFamily="@font/arial"
+                    />
 
                 <TextView
                     android:id="@+id/phonetext"
-
+                    android:fontFamily="@font/arial"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
+                    android:textSize="14dp"
                     android:text="Phone Number"/>
 
                 <EditText
@@ -147,49 +148,48 @@
                     android:ems="10"
                     android:inputType="number"
                     android:textSize="18dp"
-                    android:padding="17dp"
-                    android:layout_marginTop="5dp"
-                    android:textColor="@color/black"
-                    android:hint="03001234567"
-                    android:background="@drawable/box"
+                    android:layout_height="55dp"
                     android:paddingLeft="25dp"
-                    android:layout_height="wrap_content"/>
+                    android:fontFamily="@font/arial"
+
+                    android:layout_marginTop="5dp"
+                    android:hint="03001234567"
+                    android:background="@drawable/box"/>
 
                 <TextView
                     android:id="@+id/passtext"
 
                     android:focusable="true"
+
+                    android:fontFamily="@font/arial"
                     android:focusableInTouchMode="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
+                    android:textSize="14dp"
                     android:text="Password"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:ems="10"
+                    android:paddingLeft="25dp"
                     android:id="@+id/signuppassword"
                     android:textSize="18dp"
-                    android:padding="17dp"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/black"
                     android:hint="••••••••••••"
                     android:inputType="textPassword"
                     android:background="@drawable/box"
-                    android:paddingLeft="25dp"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="55dp"/>
                 <TextView
                     android:id="@+id/repasstext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="15dp"
+                    android:textSize="14dp"
 
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:textColor="@color/black"
+                    android:fontFamily="@font/arial"
                     android:text="Repeat Password"/>
 
                 <EditText
@@ -198,13 +198,12 @@
                     android:ems="10"
                     android:textSize="18dp"
                     android:inputType="textPassword"
-                    android:padding="17dp"
+                    android:fontFamily="@font/arial"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/black"
                     android:hint="••••••••••••"
                     android:background="@drawable/box"
                     android:paddingLeft="25dp"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="55dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -212,8 +211,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:fontFamily="sans-serif-condensed"
+                    android:fontFamily="@font/arial"
                     android:textColor="@color/black"
                     android:text="Personal Information"/>
 
@@ -223,9 +221,9 @@
                     android:focusable="true"
                     android:focusableInTouchMode="true"
                     android:layout_marginTop="20dp"
-                    android:textSize="15dp"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/arial"
                     android:id="@+id/emailtext"
-                    android:textColor="@color/black"
                     android:text="Email"/>
 
                 <EditText
@@ -234,20 +232,18 @@
                     android:ems="10"
                     android:textSize="18dp"
                     android:inputType="textEmailAddress"
-                    android:padding="17dp"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/black"
                     android:hint="yourname@email.com"
                     android:background="@drawable/box"
                     android:paddingLeft="25dp"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="55dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/arial"
                     android:text="County/Region"/>
 
                 <EditText
@@ -256,53 +252,51 @@
                     android:ems="10"
                     android:textSize="18dp"
                     android:inputType="none"
-                    android:padding="17dp"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/black"
                     android:text="Pakistan"
                     android:editable="false"
                     android:background="@drawable/box"
                     android:paddingLeft="25dp"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="55dp"/>
 
                 <TextView
                     android:id="@+id/city"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/arial"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:textColor="@color/black"
                     android:text="City"/>
 
                 <Spinner
                     android:id="@+id/cityspin"
                     android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-
+                    android:layout_height="55dp"
+                    android:foreground="@drawable/box"
                     android:layout_marginTop="5dp"/>
 
                 <TextView
                     android:focusable="true"
-
                     android:focusableInTouchMode="true"
                     android:id="@+id/location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/arial"
                     android:text="Location"
-                    android:textColor="@color/black"
-                    android:textSize="15dp" />
+                    android:textSize="14dp" />
 
                 <Spinner
                     android:id="@+id/locationspin"
+                    android:foreground="@drawable/box"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="55dp"
 
                     android:layout_marginTop="5dp"
-                    android:paddingLeft="-5dp"/>
+                    />
                 <TextView
                     android:focusable="true"
                     android:id="@+id/radiotext"
@@ -311,21 +305,22 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Choose Gender"
-                    android:textColor="@color/black"
-                    android:textSize="15dp" />
+                    android:fontFamily="@font/arial"
+                    android:textSize="14dp" />
                 <RadioGroup
                     android:id="@+id/gendergroup"
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="6dp"
                     android:orientation="horizontal"
                     android:layout_gravity="center"
                     android:gravity="center"
-
                     android:layout_height="wrap_content">
 
                     <RadioButton
-                        android:textSize="18dp"
+                        android:textSize="16dp"
                         android:id="@+id/maleradio"
+                        android:layout_marginTop="2.5dp"
+                        android:fontFamily="@font/arial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Male"
@@ -333,9 +328,12 @@
                         />
                     <RadioButton
 
-                        android:textSize="18dp"
+                        android:textSize="16dp"
+
+                        android:layout_marginTop="2.5dp"
                         android:layout_marginLeft="15dp"
                         android:id="@+id/femaleradio"
+                        android:fontFamily="@font/arial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Female"
@@ -343,8 +341,11 @@
 
                     <RadioButton
 
-                        android:textSize="18dp"
+                        android:textSize="16dp"
                         android:id="@+id/otherradio"
+
+                        android:layout_marginTop="2.5dp"
+                        android:fontFamily="@font/arial"
                         android:layout_marginLeft="15dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -362,8 +363,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Select Your Age"
-                    android:textColor="@color/black"
-                    android:textSize="15dp" />
+                    android:fontFamily="@font/arial"
+                    android:textSize="14dp" />
 
                 <DatePicker
                     android:layout_width="match_parent"
@@ -380,13 +381,16 @@
 
                 <Button
                     android:id="@+id/mainbtn"
-                    android:textColor="@color/black"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
                     android:layout_width="150dp"
+                    android:fontFamily="@font/arial"
                     android:layout_gravity="center"
                     android:layout_height="wrap_content"
                     android:text="CONTINUE"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="40dp"
                     android:background="@drawable/vie_bg"/>
 
 
@@ -419,11 +423,11 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="30dp"
         android:text="Already have an account?"
         android:textColor="@color/black"
         android:textSize="16dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/arial"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
@@ -434,13 +438,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log In"
-        android:layout_marginBottom="25dp"
-        android:textColor="#D50000"
+        android:layout_marginBottom="30dp"
+        android:textColor="#4FC803"
+        android:fontFamily="@font/arial"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".1"
+        app:layout_constraintHorizontal_bias=".05"
         app:layout_constraintStart_toEndOf="@+id/textView7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

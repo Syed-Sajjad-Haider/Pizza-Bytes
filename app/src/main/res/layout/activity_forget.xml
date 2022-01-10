@@ -34,7 +34,7 @@
             android:textStyle="bold"
             android:layout_marginTop="50dp"
             android:textColor="@color/black"
-            android:fontFamily="@font/miriam_libre"
+            android:fontFamily="@font/arial"
             android:gravity="center"
             android:text="Forget\nPassword"
             android:textAlignment="center"
@@ -47,7 +47,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
-            android:fontFamily="@font/miriam_libre"
+            android:fontFamily="@font/arial"
             android:gravity="center"
             android:text="Provide Your Account Phone Number\nfor which you want to\nreset password"
             android:textAlignment="center"
@@ -57,26 +57,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Phone Number"
-            android:textSize="18dp"
-            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:fontFamily="@font/arial"
             android:layout_marginTop="50dp"
             />
 
         <EditText
             android:id="@+id/forgetemail"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:layout_marginTop="5dp"
-            android:textColor="@color/black"
             android:paddingLeft="15dp"
             android:drawableLeft="@drawable/ic_baseline_phone_24"
-            android:drawablePadding="10dp"
+            android:drawablePadding="25dp"
             android:background="@drawable/box"
             android:backgroundTint="#DAD8D8"
             android:ems="10"
-            android:fontFamily="serif"
+            android:fontFamily="@font/arial"
             android:textSize="18dp"
-            android:gravity="center|center_horizontal|left|center_vertical"
+            android:gravity="center_horizontal|left|center_vertical"
             android:hint="03001234567"
             android:inputType="number" />
 
@@ -90,8 +89,8 @@
             android:background="@drawable/vie_bg"
             android:fontFamily="monospace"
             android:text="NEXT"
-            android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
     </LinearLayout>

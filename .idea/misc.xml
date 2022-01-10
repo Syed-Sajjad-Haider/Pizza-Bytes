@@ -3,20 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1554054054054054" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/drawable/box.xml" value="0.1554054054054054" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1554054054054054" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.1554054054054054" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1554054054054054" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/drawable/vie_bg.xml" value="0.11" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/font/aguafina_script.xml" value="0.16452702702702704" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/font/butterfly_kids.xml" value="0.16452702702702704" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/font/miriam_libre.xml" value="0.16452702702702704" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_forget.xml" value="0.18" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_make_selection.xml" value="0.14493243243243242" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_otp_verficatio_done.xml" value="0.17" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_pin_through_sms_or_mail.xml" value="0.14493243243243242" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_set_new_password.xml" value="0.14493243243243242" />
-        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_sign_in.xml" value="0.16" />
-        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_sign_up.xml" value="0.21" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_sign_in.xml" value="0.2" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_splash_screen.xml" value="0.18" />
-        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_success.xml" value="0.1" />
+        <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_success.xml" value="0.15" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/activity_verify_otp.xml" value="0.12837837837837837" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/spinner_layout.xml" value="0.14493243243243242" />
         <entry key="..\:/Users/SYED SAJJAD HAIDER/AndroidStudioProjects/PizzaBytes/app/src/main/res/layout/splashfragment1.xml" value="0.18" />

@@ -37,9 +37,10 @@
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:fontFamily="@font/arial"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
@@ -49,8 +50,7 @@
         android:shadowColor="@null"
         android:text="NEXT"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:rippleColor="#00FFFFFF" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/getbtn"
@@ -62,6 +62,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="120dp"
         android:layout_marginBottom="25dp"
+        android:fontFamily="@font/arial"
         android:background="@null"
         android:gravity="center"
         android:shadowColor="@null"

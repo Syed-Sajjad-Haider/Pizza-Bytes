@@ -48,6 +48,7 @@
 
     <string name="facebook_app_id">1123657998442468</string>
     <string name="fb_login_protocol_scheme">fb1123657998442468</string>
+    <string name="enter_your_email_and_password">Enter Your Email and Password.</string>
 
 
 </resources>
