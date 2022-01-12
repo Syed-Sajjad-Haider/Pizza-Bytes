@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/white"
     android:padding="30dp"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="com.pizza.pizzabytes.ForgetActivity">
 
     <LinearLayout
@@ -23,7 +23,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:src="@drawable/lock"/>
 
@@ -36,10 +36,10 @@
             android:textColor="@color/black"
             android:fontFamily="@font/arial"
             android:gravity="center"
-            android:text="Forget\nPassword"
+            android:text="@string/forget_npassword"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textSize="40dp"/>
+            android:textSize="40sp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -49,17 +49,17 @@
             android:textColor="@color/black"
             android:fontFamily="@font/arial"
             android:gravity="center"
-            android:text="Provide Your Account Phone Number\nfor which you want to\nreset password"
+            android:text="@string/provide_your_account_phone_number_nfor_which_you_want_to_nreset_password"
             android:textAlignment="center"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phone Number"
-            android:textSize="16dp"
+            android:text="@string/phone_number"
+            android:textSize="16sp"
             android:fontFamily="@font/arial"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             />
 
         <EditText
@@ -67,28 +67,29 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="5dp"
-            android:paddingLeft="15dp"
-            android:drawableLeft="@drawable/ic_baseline_phone_24"
+            android:paddingStart="15dp"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
             android:drawablePadding="25dp"
             android:background="@drawable/box"
             android:backgroundTint="#DAD8D8"
             android:ems="10"
             android:fontFamily="@font/arial"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:gravity="center_horizontal|left|center_vertical"
-            android:hint="03001234567"
-            android:inputType="number" />
+            android:hint="@string/_03001234567"
+            android:inputType="number"
+            tools:ignore="RtlHardcoded,TextFields" />
 
         <Button
             android:id="@+id/forgetnext"
             style="@android:style/Widget.DeviceDefault.Button.Borderless"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_marginTop="40dp"
             android:layout_gravity="center"
+            android:layout_marginTop="40dp"
             android:background="@drawable/vie_bg"
             android:fontFamily="monospace"
-            android:text="NEXT"
+            android:text="@string/next"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />

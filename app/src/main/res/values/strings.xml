@@ -2,8 +2,6 @@
     <string name="app_name">Pizza Bytes</string>
 
 
-
-
     <string-array name="array_pakistan_city">
         <item>Select Your City</item>
         <item>Lahore</item>
@@ -49,6 +47,17 @@
     <string name="facebook_app_id">1123657998442468</string>
     <string name="fb_login_protocol_scheme">fb1123657998442468</string>
     <string name="enter_your_email_and_password">Enter Your Email and Password.</string>
+    <string name="forget_npassword">Forget\nPassword</string>
+    <string name="provide_your_account_phone_number_nfor_which_you_want_to_nreset_password">Provide Your Account Phone Number\nfor which you want to\nreset password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="_03001234567">03001234567</string>
+    <string name="next">NEXT</string>
+    <string name="enter_your_email_password"><![CDATA[Enter Your Email & Password]]></string>
+    <string name="best_pizza_in_the_town">Best Pizza in The Town</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="type_email_here">Type Email Here</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password?</string>
 
 
 </resources>
